@@ -8,6 +8,12 @@
 </head>
 <body>
 
+  <% if logged_in? %>
+    <%= render "shared/logout" %>
+    <%= current_user.username %>
+  <% end %>
+
+
 <%= yield %>
 
 </body>
